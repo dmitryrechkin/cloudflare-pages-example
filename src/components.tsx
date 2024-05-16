@@ -74,11 +74,11 @@ export const Form = () => {
 			<form onSubmit={(e) => e.preventDefault()}>
 				<div>
 					<label htmlFor="question">Question</label>
-					<textarea id="question" name="question" rows={10} value={question} onChange={(e) => setQuestion((e.target as HTMLTextAreaElement)?.value ?? '')}></textarea>
+					<textarea id="question" name="question" rows={10} value={question} onClick={() => setAlerts('')} onChange={(e) => setQuestion((e.target as HTMLTextAreaElement)?.value ?? '')}></textarea>
 				</div>
 				<div>
 					<label htmlFor="answer">Answer</label>
-					<textarea id="answer" name="answer" rows={10} value={answer} onChange={(e) => setAnswer((e.target as HTMLTextAreaElement)?.value ?? '')}></textarea>
+					<textarea id="answer" name="answer" rows={10} value={answer} onClick={() => setAlerts('')} onChange={(e) => setAnswer((e.target as HTMLTextAreaElement)?.value ?? '')}></textarea>
 				</div>
 				<div>
 					<button type="button" onClick={handleGenerateAnswer}>Find Answer</button>
